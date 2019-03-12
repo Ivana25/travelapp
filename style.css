@@ -1,0 +1,78 @@
+@import url("//db.onlinewebfonts.com/c/3c387248236f4a20f8bffd6fc33178ee?family=Royal+Initialen");
+
+h1{
+    font-family: "Royal Initialen";
+    font-size: 100px;
+    color: white;
+    margin:0;
+    padding:0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 5em;
+    letter-spacing: 0.2em;
+}
+
+section {
+    height: 100vh;
+    background-color: transparent;
+ }
+ 
+ h1 span {
+    display: inline-block;
+    animation: animate 1s linear forwards;
+ 
+ }
+
+
+body {
+    background-image: url(1.\ Burj\ Khalifa\,\ Dubai.jpg);
+    text-align: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%; 
+}
+
+#button {
+   border: 15px ridge teal;
+   font-size: 40px;
+   border-radius: 40px;
+   background-color: transparent;
+   background-color: rgba(255, 255, 255, 0.513);
+}
+
+html{
+    margin-top: 50px;
+}
+
+input{
+    font-size: 40px;
+    border: 15px ridge teal;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 40px;
+    background-color: rgba(255, 255, 255, 0.513);
+    color: white; 
+}
+
+@keyframes animate
+{
+   0%
+   { opacity: 0;
+       transform: rotateY(90deg);
+       filter: blur(10px);
+}
+   100%
+   {
+       opacity: 1;
+           transform: rotateY(0deg);
+           filter: blur(0px);
+   }
+}
+
+video{
+    background-color: transparent;
+}
