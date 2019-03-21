@@ -4,10 +4,11 @@ console.log("hi")
 $("#journey").click(function () {
    console.log(1)
    // onclick="doThisFunction();thenDoTheOtherFunction();"
-   fetch('https://api.foursquare.com/v2/venues/explore?QR2DHCKWFADGCEVTE12AHCNWSP4Q2UI330HPJ2VB14X05ZC0&client_secret=W0VM2ZNYLWDACZN3QIJDQLGVO2GDBRRFHZDLCMEWE13QI2L5&v=20180323&limit=1&ll=40.7243,-74.0018&query=coffee')
+   fetch('https://api.foursquare.com/v2/venues/search?near=atlanta&client_id=QR2DHCKWFADGCEVTE12AHCNWSP4Q2UI330HPJ2VB14X05ZC0&client_secret=W0VM2ZNYLWDACZN3QIJDQLGVO2GDBRRFHZDLCMEWE13QI2L5&v=20190319')
    .then(function(response) {
        // Code for handling API response
-       console.log(response)
+    
+       response.json().then(body => handleJson(body));
    })
    .catch(function(error) {
        console.log(error)
@@ -21,5 +22,11 @@ function getVenue() {
    console.log(firstVenue)
            const venues = $("#listOfVenues").val()
            
+}
+
+function handleJson(json){
+    for(venue in json.response.venues) {
+        console.log(venue.id)
+    }
 }
 })
