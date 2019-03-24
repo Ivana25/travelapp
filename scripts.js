@@ -27,7 +27,7 @@ function getVenue() {
 
 function handleJson(json){
     for(i=0;i<json.response.venues.length;i++) {
-        $("#list").append(json.response.venues[i].name)
+        $("#list").append( json.response.venues[i].name + ", " ) 
         console.log(json.response.venues[i].name)
     }
 }
